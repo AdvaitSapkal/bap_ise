@@ -4,6 +4,7 @@ import plotly.graph_objs as go
 from plotly.subplots import make_subplots
 import dash
 from dash import dcc, html
+from dash.dependencies import Input, Output
 import numpy as np
 
 app = Flask(__name__)
@@ -24,26 +25,108 @@ layout2 = go.Layout(title='Graph 2')
 
 # Define layout for the Dash app
 dash_app.layout = html.Div(children=[
-    html.H1(children='Dashboard with Dash and Flask'),
+    html.H1(children='Hours Spent per Teacher'),
     
-    # Plotly graph 1
-    dcc.Graph(
-        id='graph1',
-        figure={
-            'data': [trace1],
-            'layout': layout1
-        }
+    # Dropdowns for selecting filters
+    dcc.Dropdown(
+        id='day-dropdown',
+        options=[{'label': day, 'value': day} for day in df['day'].unique()]+[{'label':'include-all','value':'include-all'}],
+        value=df['day'].unique()[0],
+        multi=False,
+        searchable=False,
+        placeholder='Select Day'
     ),
-    
-    # Plotly graph 2
-    dcc.Graph(
-        id='graph2',
-        figure={
-            'data': [trace2],
-            'layout': layout2
-        }
+    dcc.Dropdown(
+        id='department-dropdown',
+        options=[{'label': dept, 'value': dept} for dept in df['department'].unique()]+[{'label':'include-all','value':'include-all'}],
+        value=df['department'].unique()[0],
+        multi=False,
+        searchable=False,
+        placeholder='Select Department'
     ),
+    dcc.Dropdown(
+        id='type-dropdown',
+        options=[{'label': typ, 'value': typ} for typ in df['lab_or_lecture'].unique()]+[{'label':'include-all','value':'include-all'}],
+        value=df['lab_or_lecture'].unique()[0],
+        multi=False,
+        searchable=False,
+        placeholder='Select Type'
+    ),
+    dcc.Graph(id='hours-per-teacher'),
+
+    html.H1(children='Distribution of Teacher by subject, by department, by year, by lab/lecture'),
+    html.H2(children='select how to split disribution by:'),
+
+    dcc.Dropdown(
+        id='dist_by-dropdown',
+        options=[{'label':'branch','value':'branch'},{'label':'year','value':'year'},{'label':'lab_or_lecture','value':'lab_or_lecture'},{'label':'subject','value':'subject'}],
+        value='subject',
+        multi=False,
+        searchable=False,
+        placeholder='Select Type'
+    ),
+    dcc.Dropdown(
+        id='faculty-dropdown',
+        options=[{'label': typ, 'value': typ} for typ in df['faculty_code'].unique()],
+        value=df['faculty_code'].unique()[0],
+        multi=False,
+        searchable=False,
+        placeholder='Select Type'
+    ),
+
+    dcc.Graph(id='dist-by-teacher')
 ])
+
+# Define callback to update the Plotly graph based on dropdown selections
+@dash_app.callback(
+    Output('hours-per-teacher', 'figure'),
+    [Input('day-dropdown', 'value'),
+     Input('department-dropdown', 'value'),
+     Input('type-dropdown', 'value')]
+)
+
+
+
+def update_graph1(selected_day, selected_department, selected_type):
+    filtered_df=df
+    if(selected_day!='include-all'):
+        filtered_df = df[(df['day'] == selected_day)]
+    if(selected_department!='include-all'):
+        filtered_df = filtered_df[(filtered_df['department'] == selected_department)]
+    if(selected_type!='include-all'):
+        filtered_df = filtered_df[(filtered_df['lab_or_lecture'] == selected_type)]
+    hours_per_teacher = filtered_df.groupby('faculty_code')['duration'].sum()
+    
+    fig = go.Figure(data=[go.Bar(x=hours_per_teacher.index, y=hours_per_teacher.values)])
+    fig.update_layout(title='Hours Spent per Teacher '+selected_day+" "+selected_department+" "+selected_type,
+                      xaxis_title='Teacher',
+                      yaxis_title='Total Hours')
+    
+    return fig
+
+@dash_app.callback(
+    Output('dist-by-teacher', 'figure'),
+    [Input('dist_by-dropdown', 'value'),
+     Input('faculty-dropdown', 'value')]
+)
+
+def update_graph2(selected_by, selected_faculty):
+    filtered_df = df[df['faculty_code'] == selected_faculty]
+    dist_by='subject_code'
+    if(selected_by=='branch'):
+        dist_by='branch'
+    elif(selected_by=='year'):
+        dist_by='year'
+    elif(selected_by=='lab_or_lecture'):
+        dist_by='lab_or_lecture'
+
+
+    fig = go.Figure(data=[go.Pie(labels=filtered_df[dist_by],
+                             values=filtered_df['duration'],
+                             hoverinfo='label+percent',
+                             textinfo='value')])
+    
+    return fig
 
 @app.route('/dashboard/')
 def dash_app():
