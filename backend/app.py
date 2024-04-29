@@ -5,8 +5,10 @@ from plotly.subplots import make_subplots
 import dash
 from dash import dcc, html
 import numpy as np
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 df = pd.read_csv('./bap_ise_data.csv')
 
