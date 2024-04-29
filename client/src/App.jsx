@@ -7,6 +7,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import './App.css'
+import Room from "./pages/Room";
 
 function App() {
   const router = createBrowserRouter([
@@ -42,10 +43,10 @@ function App() {
           path: '/home',
           element: <Home />
         },
-        // {
-        //   path: '/dashboard',
-        //   element: <Dashboard />
-        // },
+        {
+          path: '/room',
+          element: <Room />
+        },
       ]
     }
   ]);
