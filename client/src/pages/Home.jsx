@@ -53,7 +53,7 @@ const Home = () => {
                     const endDateTime = moment(`${event.end_time} ${event.day}`, "HH:mm:ss dddd").toDate();
 
                     return {
-                        title: event.subject_code + " " + event.lab_or_lecture,
+                        title: event.subject_code + " " + event.lab_or_lecture + " (" + event.room_num + ")",
                         start: startDateTime,
                         end: endDateTime,
                         resourceId: event.room_num
