@@ -7,7 +7,7 @@ const Occupancy = ({ occupiedRooms, totalRooms }) => {
     { name: 'Free', value: totalRooms - occupiedRooms.length },
   ];
 
-  const COLORS = ['#EF4444', '#22C55E']; // Colors for occupied and free
+  const COLORS = ['#FCA5A5', '#86EFAC']; // Colors for occupied and free
 
   return (
     <PieChart width={400} height={400}>
