@@ -15,10 +15,14 @@ const Home = () => {
     const [events, setEvents] = useState([]);
     const [loading, setLoading] = useState(true);
     const [faculty, setFaculty] = useState({
-        faculty_code: "SYC",
-        faculty_name: "Sheetal Choudhary"
-    });
+        faculty_code: "SC",
+        faculty_name: "Siddhartha Chandra"
+    },);
     const [facultyList, setFacultyList] = useState([
+        {
+            faculty_code: "SC",
+            faculty_name: "Siddhartha Chandra"
+        },
         {
             faculty_code: "SYC",
             faculty_name: "Sheetal Choudhary"
@@ -36,14 +40,30 @@ const Home = () => {
             faculty_name: "Reeta Koshy"
         },
         {
-            faculty_code: "SC",
-            faculty_name: "Siddhartha Chandra"
+            faculty_code: "DRK",
+            faculty_name: "Dhananjay Kalbande"
+        },
+        {
+            faculty_code: "RP",
+            faculty_name: "Renuka Pawar"
+        },
+        {
+            faculty_code: "VK",
+            faculty_name: "Vipul Kushawa"
+        },
+        {
+            faculty_code: "SBG",
+            faculty_name: "Sunil Ghane"
+        },
+        {
+            faculty_code: "VH",
+            faculty_name: "Varsha Hole"
         },
         
     ]);
 
     useEffect(() => {
-        fetchData("SYC");
+        fetchData("SC");
     }, []);
 
     const fetchData = (facultyCode) => {
