@@ -20,7 +20,7 @@ const Home = () => {
     });
     const [facultyList, setFacultyList] = useState([
         {
-            faculty_code: "SC",
+            faculty_code: "SYC",
             faculty_name: "Sheetal Choudhary"
         },
         {
@@ -35,10 +35,15 @@ const Home = () => {
             faculty_code: "RK",
             faculty_name: "Reeta Koshy"
         },
+        {
+            faculty_code: "SC",
+            faculty_name: "Siddhartha Chandra"
+        },
+        
     ]);
 
     useEffect(() => {
-        fetchData("SC");
+        fetchData("SYC");
     }, []);
 
     const fetchData = (facultyCode) => {
@@ -51,9 +56,12 @@ const Home = () => {
                 const eventList = res.data.map((event) => {
                     const startDateTime = moment(`${event.start_time} ${event.day}`, "HH:mm:ss dddd").toDate();
                     const endDateTime = moment(`${event.end_time} ${event.day}`, "HH:mm:ss dddd").toDate();
+                    const eventTitle = event.batch === "N" ? event.subject_code + " " + event.lab_or_lecture + " (" + event.room_num + ")": 
+                    event.subject_code + " " + event.lab_or_lecture + " - " + event.batch + " (" + event.room_num + ")";
 
                     return {
-                        title: event.subject_code + " " + event.lab_or_lecture + " (" + event.room_num + ")",
+                        title: eventTitle,
+                        // title: event.subject_code + " " + event.lab_or_lecture + " - " + event.batch + " (" + event.room_num + ")",
                         start: startDateTime,
                         end: endDateTime,
                         resourceId: event.room_num
