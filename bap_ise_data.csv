@@ -137,8 +137,6 @@ serial_num,subject_code,course_type,lab_or_lecture,department,branch,batch,facul
 136,CCN,PC,lab,CE,COMPSA,B,AVS,6,606-5,monday,11:15:00,13:15:00,SE,2
 137,LA,BSC,lecture,CE,COMPSA,N,CRG,8,801,monday,14:00:00,15:00:00,SE,1
 138,FOM-II,BSC(LE),lecture,all,all,N,RRS,8,801,monday,14:00:00,15:00:00,SE,1
-139,DSA,M,lecture,all,all,N,NR,6,609,monday,16:00:00,18:00:00,SE,2
-140,OS,M,lab,all,all,A,JR,6,606,monday,16:00:00,18:00:00,SE,2
 141,CCN,PC,lecture,CE,COMPSA,N,AVS,8,801,tuesday,9:00:00,10:00:00,SE,1
 142,DAA,PC,lecture,CE,COMPSA,N,SND,8,801,tuesday,10:00:00,11:00:00,SE,1
 143,CCN,PC,lab,CE,COMPSA,A,AVS,6,608,tuesday,11:15:00,13:15:00,SE,2
@@ -146,8 +144,6 @@ serial_num,subject_code,course_type,lab_or_lecture,department,branch,batch,facul
 145,LA,BSC,lab,CE,COMPSA,D,CRG,7,703,tuesday,11:15:00,13:15:00,SE,2
 146,DAA,PC,lab,CE,COMPSA,C,SND,6,604,tuesday,11:15:00,13:15:00,SE,2
 147,OS,PC,lecture,CE,COMPSA,N,KKD,8,801,tuesday,14:00:00,15:00:00,SE,1
-148,DSA,M,lab,all,all,A,JR,6,603,tuesday,16:00:00,18:00:00,SE,2
-149,OS,M,lab,all,all,B,NR,6,606,tuesday,16:00:00,18:00:00,SE,2
 150,PCS,SBC,lab,CE,COMPSA,D,DN,6,607B,wednesday,9:00:00,11:00:00,SE,2
 151,OS,PC,lab,CE,COMPSA,A,KKD,6,606-4,wednesday,9:00:00,11:00:00,SE,2
 152,LA,BSC,lab,CE,COMPSA,B,CRG,7,703,wednesday,9:00:00,11:00:00,SE,2
@@ -155,8 +151,6 @@ serial_num,subject_code,course_type,lab_or_lecture,department,branch,batch,facul
 154,PCS,SBC,lecture,CE,COMPSA,N,DN,8,801,wednesday,11:15:00,12:15:00,SE,1
 155,OS,PC,lecture,CE,COMPSA,N,KKD,8,801,wednesday,12:15:00,13:15:00,SE,1
 156,LA,BSC,lecture,CE,COMPSA,N,CRG,8,801,wednesday,14:00:00,15:00:00,SE,1
-157,DSA,M,lecture,all,all,N,NR,6,603,wednesday,16:00:00,18:00:00,SE,2
-158,OS,M,lecture,all,all,N,JR,6,606,wednesday,16:00:00,18:00:00,SE,2
 159,OS,PC,lecture,CE,COMPSA,N,KKD,8,801,thursday,9:00:00,10:00:00,SE,1
 160,DAA,PC,lecture,CE,COMPSA,N,SND,8,801,thursday,10:00:00,11:00:00,SE,1
 161,OS,PC,lab,CE,COMPSA,D,KKD,6,603-3,thursday,11:15:00,13:15:00,SE,2
@@ -164,8 +158,6 @@ serial_num,subject_code,course_type,lab_or_lecture,department,branch,batch,facul
 163,DAA,PC,lab,CE,COMPSA,B,SND,6,604,thursday,11:15:00,13:15:00,SE,2
 164,CCN,PC,lab,CE,COMPSA,C,AVS,6,603-2,thursday,11:15:00,13:15:00,SE,2
 165,FOM-II,BSC(LE),lecture,all,all,N,RRS,3,309,thursday,14:00:00,15:00:00,SE,1
-166,DSA,M,lab,all,all,C,NR,6,603,thursday,16:00:00,18:00:00,SE,2
-167,OS,M,lab,all,all,C,JR,6,606,thursday,16:00:00,18:00:00,SE,2
 168,CCN,PC,lab,CE,COMPSA,D,AVS,6,603-2,friday,9:00:00,11:00:00,SE,2
 169,DAA,PC,lab,CE,COMPSA,A,SND,6,604,friday,9:00:00,11:00:00,SE,2
 170,PCS,SBC,lab,CE,COMPSA,B,DN,6,607B,friday,9:00:00,11:00:00,SE,2
@@ -180,8 +172,6 @@ serial_num,subject_code,course_type,lab_or_lecture,department,branch,batch,facul
 179,DAA,PC,lecture,CE,COMPSB,N,PBB,6,609,monday,11:15:00,12:15:00,SE,1
 180,CCN,PC,lecture,CE,COMPSB,N,JS,6,609,monday,12:15:00,13:15:00,SE,1
 181,FOM-II,BSC(LE),lecture,all,all,DSE,RRS,3,309,monday,14:00:00,15:00:00,SE,1
-182,DSA,M,lecture,all,all,N,NR,6,609,monday,16:00:00,18:00:00,SE,2
-183,OS,M,lab,all,all,A,JR,6,606,monday,16:00:00,18:00:00,SE,2
 184,CCN,PC,lab,CE,COMPSB,B,JS,6,603C,tuesday,9:00:00,11:00:00,SE,2
 185,OS,PC,lab,CE,COMPSB,D,SK,6,606A,tuesday,9:00:00,11:00:00,SE,2
 186,DAA,PC,lab,CE,COMPSB,C,PBB,6,606B,tuesday,9:00:00,11:00:00,SE,2
@@ -189,8 +179,6 @@ serial_num,subject_code,course_type,lab_or_lecture,department,branch,batch,facul
 188,PCS,SBC,lecture,CE,COMPSB,N,DN,6,609,tuesday,11:15:00,12:15:00,SE,1
 189,OS,PC,lecture,CE,COMPSB,N,SK,6,609,tuesday,12:15:00,13:15:00,SE,1
 190,CCN,PC,lecture,CE,COMPSB,N,JS,6,609,tuesday,14:00:00,15:00:00,SE,1
-191,DSA,M,lab,all,all,A,NR,6,609,tuesday,16:00:00,18:00:00,SE,2
-192,OS,M,lab,all,all,B,JR,6,606,tuesday,16:00:00,18:00:00,SE,2
 193,CCN,PC,lecture,CE,COMPSB,N,JS,6,609,wednesday,9:00:00,10:00:00,SE,1
 194,DAA,PC,lecture,CE,COMPSB,N,PBB,6,609,wednesday,10:00:00,11:00:00,SE,1
 195,CCN,PC,lab,CE,COMPSB,C,JS,6,603B,wednesday,11:15:00,13:15:00,SE,2
@@ -207,8 +195,6 @@ serial_num,subject_code,course_type,lab_or_lecture,department,branch,batch,facul
 206,OS,PC,lecture,CE,COMPSB,N,SK,6,609,thursday,12:15:00,13:15:00,SE,1
 207,LA,BSC,lecture,CE,COMPSB,N,CRG,6,609,thursday,14:00:00,15:00:00,SE,1
 208,FOM-II,BSC(LE),lecture,all,all,DSE,RRS,3,309,thursday,14:00:00,15:00:00,SE,1
-209,DSA,M,lab,all,all,C,NR,6,603,thursday,16:00:00,18:00:00,SE,2
-210,OS,M,lab,all,all,C,JR,6,605,thursday,16:00:00,18:00:00,SE,2
 211,LA,BSC,lecture,CE,COMPSB,N,CRG,6,609,friday,9:00:00,10:00:00,SE,1
 212,OS,PC,lecture,CE,COMPSB,N,SK,6,609,friday,10:00:00,11:00:00,SE,1
 213,LA,BSC,lab,CE,COMPSB,B,CRG,7,703,friday,11:15:00,13:15:00,SE,2
@@ -223,8 +209,6 @@ serial_num,subject_code,course_type,lab_or_lecture,department,branch,batch,facul
 222,CCN,PC,lecture,CSE,AIML,N,DDA,4,405,monday,11:15:00,12:15:00,SE,1
 223,CCN,PC,lecture,CSE,AIML,N,DDA,4,405,monday,12:15:00,13:15:00,SE,1
 224,FOM-II,BSC(LE),lecture,all,all,N,RRS,3,309,monday,14:00:00,15:00:00,SE,1
-225,DSA,M,lecture,all,all,N,NR,6,609,monday,16:00:00,18:00:00,SE,2
-226,OS,M,lab,all,all,A,JR,6,606,monday,16:00:00,18:00:00,SE,2
 227,DAA,PC,lecture,CSE,AIML,N,AT ,4,405,tuesday,9:00:00,10:00:00,SE,1
 228,DAA,PC,lecture,CSE,AIML,N,AT,4,405,tuesday,10:00:00,11:00:00,SE,1
 229,OS,PC,lab,CSE,AIML,D,SYC,4,408,tuesday,11:15:00,13:15:00,SE,2
@@ -232,8 +216,6 @@ serial_num,subject_code,course_type,lab_or_lecture,department,branch,batch,facul
 231,DAA,PC,lab,CSE,AIML,C,AT,7,702B,tuesday,11:15:00,13:15:00,SE,2
 232,CCN,PC,lab,CSE,AIML,A,JS,4,412,tuesday,11:15:00,13:15:00,SE,2
 233,LA,BSC,lecture,CSE,AIML,N,RM,4,405,tuesday,14:00:00,15:00:00,SE,1
-234,DSA,M,lecture,all,all,N,NR,6,609,tuesday,16:00:00,18:00:00,SE,2
-235,OS,M,lecture,all,all,N,JR,6,605,tuesday,16:00:00,18:00:00,SE,2
 236,CCN,PC,lab,CSE,AIML,B,DDA,4,404,wednesday,9:00:00,11:00:00,SE,2
 237,PCS,SBC,lab,CSE,AIML,D,SD2,4,407,wednesday,9:00:00,11:00:00,SE,2
 238,DAA,PC,lab,CSE,AIML,A,SAK,4,410B,wednesday,9:00:00,11:00:00,SE,2
@@ -241,8 +223,6 @@ serial_num,subject_code,course_type,lab_or_lecture,department,branch,batch,facul
 240,CCN,PC,lecture,CSE,AIML,N,DDA,4,405,wednesday,11:15:00,12:15:00,SE,1
 241,LA,BSC,lecture,CSE,AIML,N,RM,4,405,wednesday,12:15:00,13:15:00,SE,1
 242,PCS,SBC,lecture,CSE,AIML,N,SD2,4,405,wednesday,14:00:00,15:00:00,SE,1
-243,DSA,M,lecture,all,all,N,NR,6,609,wednesday,16:00:00,18:00:00,SE,2
-244,OS,M,lab,all,all,B,JR,6,606,wednesday,16:00:00,18:00:00,SE,2
 245,DAA,PC,lecture,CSE,AIML,N,AT,4,405,thursday,9:00:00,10:00:00,SE,1
 246,OS,PC,lecture,CSE,AIML,N,SYC,4,405,thursday,10:00:00,11:00:00,SE,1
 247,PCS,SBC,lab,CSE,AIML,A,SD2,4,406A,thursday,11:15:00,13:15:00,SE,2
@@ -250,8 +230,6 @@ serial_num,subject_code,course_type,lab_or_lecture,department,branch,batch,facul
 249,OS,PC,lab,CSE,AIML,C,JR,4,408,thursday,11:15:00,13:15:00,SE,2
 250,CCN,PC,lab,CSE,AIML,D,JS,4,410B,thursday,11:15:00,13:15:00,SE,2
 251,FOM-II,BSC(LE),lecture,CSE,AIML,N,RRS,3,309,thursday,14:00:00,15:00:00,SE,1
-252,DSA,M,lecture,all,all,N,NR,6,609,thursday,16:00:00,18:00:00,SE,2
-253,OS,M,lab,all,all,C,JR,6,606,thursday,16:00:00,18:00:00,SE,2
 254,OS,PC,lecture,CSE,AIML,N,SYC,4,405,friday,9:00:00,10:00:00,SE,1
 255,OS,PC,lecture,CSE,AIML,N,SYC,4,405,friday,10:00:00,11:00:00,SE,1
 256,OS,PC,lab,CSE,AIML,A,JR,4,408,friday,11:15:00,13:15:00,SE,2
@@ -261,44 +239,44 @@ serial_num,subject_code,course_type,lab_or_lecture,department,branch,batch,facul
 260,FOM-II,BSC(LE),lecture,all,all,N,RRS,3,309,friday,14:00:00,15:00:00,SE,1
 261,CCN,PC,lecture,CSE,AIML,N,AVS,4,405,monday,9:00:00,10:00:00,SE,1
 262,CCN,PC,lecture,CSE,AIML,N,AVS,4,405,monday,10:00:00,11:00:00,SE,1
-263,DAA,PC,lab,CSE,AIML,D,AVN,4,410B,monday,11:15:00,13:15:00,SE,2
-264,PCS,SBC,lab,CSE,AIML,C,SD2,4,408,monday,11:15:00,13:15:00,SE,2
-265,LA,BSC,lab,CSE,AIML,B ,RM,4,404,monday,11:15:00,13:15:00,SE,2
-266,CCN,PC,lab,CSE,AIML,A,JR,4,406B,monday,11:15:00,13:15:00,SE,2
+263,DAA,PC,lab,CSE,DS,D,AVN,4,410B,monday,11:15:00,13:15:00,SE,2
+264,PCS,SBC,lab,CSE,DS,C,SD2,4,408,monday,11:15:00,13:15:00,SE,2
+265,LA,BSC,lab,CSE,DS,B ,RM,4,404,monday,11:15:00,13:15:00,SE,2
+266,CCN,PC,lab,CSE,DS,A,JR,4,406B,monday,11:15:00,13:15:00,SE,2
 267,FOM-II,BSC(LE),lecture,all,all,N,RRS,3,309,monday,14:00:00,15:00:00,SE,1
 268,DSA,M,lecture,all,all,N,NR,6,609,monday,16:00:00,18:00:00,SE,2
 269,OS,M,lab,all,all,A,JR,6,606,monday,16:00:00,18:00:00,SE,2
-270,PCS,SBC,lab,CSE,AIML,B,SD2,4,407,tuesday,9:00:00,11:00:00,SE,2
-271,LA,BSC,lab,CSE,AIML,D,RM,4,410C,tuesday,9:00:00,11:00:00,SE,2
-272,DAA,PC,lab,CSE,AIML,C,AVN,4,410B,tuesday,9:00:00,11:00:00,SE,2
-273,OS,PC,lab,CSE,AIML,A,VB,4,408,tuesday,9:00:00,11:00:00,SE,2
-274,PCS,SBC,lecture,CSE,AIML,N,SD2,4,405,tuesday,11:15:00,12:15:00,SE,1
-275,DAA,PC,lecture,CSE,AIML,N,AVN,4,405,tuesday,12:15:00,13:15:00,SE,1
-276,CCN,PC,lecture,CSE,AIML,N,AVS,4,407,tuesday,14:00:00,15:00:00,SE,1
+270,PCS,SBC,lab,CSE,DS,B,SD2,4,407,tuesday,9:00:00,11:00:00,SE,2
+271,LA,BSC,lab,CSE,DS,D,RM,4,410C,tuesday,9:00:00,11:00:00,SE,2
+272,DAA,PC,lab,CSE,DS,C,AVN,4,410B,tuesday,9:00:00,11:00:00,SE,2
+273,OS,PC,lab,CSE,DS,A,VB,4,408,tuesday,9:00:00,11:00:00,SE,2
+274,PCS,SBC,lecture,CSE,DS,N,SD2,4,405,tuesday,11:15:00,12:15:00,SE,1
+275,DAA,PC,lecture,CSE,DS,N,AVN,4,405,tuesday,12:15:00,13:15:00,SE,1
+276,CCN,PC,lecture,CSE,DS,N,AVS,4,407,tuesday,14:00:00,15:00:00,SE,1
 277,DSA,M,lecture,all,all,N,NRR,6,603,tuesday,16:00:00,18:00:00,SE,2
 278,OS,M,lecture,all,all,N,JR,6,605,tuesday,16:00:00,18:00:00,SE,2
-279,DAA,PC,lecture,CSE,AIML,N,AVN ,4,405,wednesday,9:00:00,10:00:00,SE,1
-280,DAA,PC,lecture,CSE,AIML,N,AVN,4,405,wednesday,10:00:00,11:00:00,SE,1
-281,DAA,PC,lab,CSE,AIML,B,AVN,4,410B,wednesday,11:15:00,13:15:00,SE,2
-282,OS,PC,lab,CSE,AIML,C,AT,4,408,wednesday,11:15:00,13:15:00,SE,2
-283,CCN,PC,lab,CSE,AIML,D,JR,4,410A,wednesday,11:15:00,13:15:00,SE,2
-284,PCS,SBC,lab,CSE,AIML,A,SD2,4,412,wednesday,11:15:00,13:15:00,SE,2
-285,OS,PC,lecture,CSE,AIML,N,AT,4,407,wednesday,14:00:00,15:00:00,SE,1
+279,DAA,PC,lecture,CSE,DS,N,AVN ,4,405,wednesday,9:00:00,10:00:00,SE,1
+280,DAA,PC,lecture,CSE,DS,N,AVN,4,405,wednesday,10:00:00,11:00:00,SE,1
+281,DAA,PC,lab,CSE,DS,B,AVN,4,410B,wednesday,11:15:00,13:15:00,SE,2
+282,OS,PC,lab,CSE,DS,C,AT,4,408,wednesday,11:15:00,13:15:00,SE,2
+283,CCN,PC,lab,CSE,DS,D,JR,4,410A,wednesday,11:15:00,13:15:00,SE,2
+284,PCS,SBC,lab,CSE,DS,A,SD2,4,412,wednesday,11:15:00,13:15:00,SE,2
+285,OS,PC,lecture,CSE,DS,N,AT,4,407,wednesday,14:00:00,15:00:00,SE,1
 286,DSA,M,lecture,all,all,N,NR,6,609,wednesday,16:00:00,18:00:00,SE,2
 287,OS,M,lab,all,all,B,JR,6,606,wednesday,16:00:00,18:00:00,SE,2
-288,CCN,PC,lab,CSE,AIML,B,AVS,4,410A,thursday,9:00:00,11:00:00,SE,2
-289,OS,PC,lab,CSE,AIML,D,VB,4,406B,thursday,9:00:00,11:00:00,SE,2
-290,DAA,PC,lab,CSE,AIML,A,AVN,4,410B,thursday,9:00:00,11:00:00,SE,2
-291,LA,BSC,lab,CSE,AIML,C,SP,4,410C,thursday,9:00:00,11:00:00,SE,2
-292,LA,BSC,lecture,CSE,AIML,N,RM,4,405,thursday,11:15:00,12:15:00,SE,1
-293,LA,BSC,lecture,CSE,AIML,N,RM,4,405,thursday,12:15:00,13:15:00,SE,1
+288,CCN,PC,lab,CSE,DS,B,AVS,4,410A,thursday,9:00:00,11:00:00,SE,2
+289,OS,PC,lab,CSE,DS,D,VB,4,406B,thursday,9:00:00,11:00:00,SE,2
+290,DAA,PC,lab,CSE,DS,A,AVN,4,410B,thursday,9:00:00,11:00:00,SE,2
+291,LA,BSC,lab,CSE,DS,C,SP,4,410C,thursday,9:00:00,11:00:00,SE,2
+292,LA,BSC,lecture,CSE,DS,N,RM,4,405,thursday,11:15:00,12:15:00,SE,1
+293,LA,BSC,lecture,CSE,DS,N,RM,4,405,thursday,12:15:00,13:15:00,SE,1
 294,FOM-II,BSC(LE),lecture,all,all,N,RRS,3,309,thursday,14:00:00,15:00:00,SE,1
 295,DSA,M,lecture,all,all,N,NR,6,609,thursday,16:00:00,18:00:00,SE,2
 296,OS,M,lab,all,all,C,JR,6,606,thursday,16:00:00,18:00:00,SE,2
-297,PCS,SBC,lab,CSE,AIML,D,SD2,4,407,friday,9:00:00,11:00:00,SE,2
-298,OS,PC,lab,CSE,AIML,B,AT,4,408,friday,9:00:00,11:00:00,SE,2
-299,LA,BSC,lab,CSE,AIML,A,RM,4,404,friday,9:00:00,11:00:00,SE,2
-300,CCN,PC,lab,CSE,AIML,C,AVN,4,410B,friday,9:00:00,11:00:00,SE,2
-301,OS,PC,lecture,CSE,AIML,N,AT,4,405,friday,11:15:00,12:15:00,SE,1
-302,OS,PC,lecture,CSE,AIML,N,AT,4,405,friday,12:15:00,13:15:00,SE,1
+297,PCS,SBC,lab,CSE,DS,D,SD2,4,407,friday,9:00:00,11:00:00,SE,2
+298,OS,PC,lab,CSE,DS,B,AT,4,408,friday,9:00:00,11:00:00,SE,2
+299,LA,BSC,lab,CSE,DS,A,RM,4,404,friday,9:00:00,11:00:00,SE,2
+300,CCN,PC,lab,CSE,DS,C,AVN,4,410B,friday,9:00:00,11:00:00,SE,2
+301,OS,PC,lecture,CSE,DS,N,AT,4,405,friday,11:15:00,12:15:00,SE,1
+302,OS,PC,lecture,CSE,DS,N,AT,4,405,friday,12:15:00,13:15:00,SE,1
 303,FOM-II,BSC(LE),lecture,all,all,N,RRS,3,309,friday,14:00:00,15:00:00,SE,1
