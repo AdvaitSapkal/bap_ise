@@ -15,7 +15,7 @@ const Home = () => {
     const [events, setEvents] = useState([]);
     const [loading, setLoading] = useState(true);
     const [faculty, setFaculty] = useState({
-        faculty_code: "SC",
+        faculty_code: "SYC",
         faculty_name: "Sheetal Choudhary"
     });
     const [facultyList, setFacultyList] = useState([
