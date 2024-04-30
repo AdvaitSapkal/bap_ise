@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #E6E6FA;
+}
+
+.navbar {
+    background-color: #33006F; /* Deep purple background */
+    color: white;
+    padding: 0.2rem 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: normal;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar-header {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: white;
+    margin-left: 2rem;
+    margin-right: 0.5rem;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0.5rem;
+    padding: 0;
+}
+
+.navbar li {
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+h1 {
+    font-family: 'Poppins', sans-serif;
+}
+/* Additional styles for active state and other elements can be added here */
