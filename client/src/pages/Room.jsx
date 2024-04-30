@@ -90,7 +90,6 @@ function Room() {
             sx={{ padding: '10px' }}
           />
         </div>
-        {/* Render rooms by floor */}
         {Object.entries(floors).map(([floor, roomsOnFloor]) => (
           <div key={floor}>
             <h1 className="text-xl font-bold mt-6 mb-2">{floor} floor</h1>
