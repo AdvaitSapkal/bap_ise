@@ -4,12 +4,17 @@ import axios from "axios";
 import Occupancy from '../components/Occupancy'; 
 
 import { ServerUrl } from '../Constants'; 
+
 const rooms = [
-  "601", "410B", "406A", "404", "407", "606B", "408", "406B", "308",
-  "606A", "608", "410A", "203", "702", "008", "604", "405", "503",
-  "603B", "411", "409", "605", "509", "online", "506B", "702B",
-  "603C", "603", "606", "603A", "702A", "609", "801", "607B", "703",
-  "606-5", "606-4", "603-3", "603-2", "309", "410C", "412",
+  { name: "601", floor: "6th" }, { name: "410B", floor: "4th" }, { name: "406A", floor: "4th" }, { name: "404", floor: "4th" }, { name: "407", floor: "4th" },
+  { name: "606B", floor: "6th" }, { name: "408", floor: "4th" }, { name: "406B", floor: "4th" }, { name: "308", floor: "3rd" }, { name: "606A", floor: "6th" },
+  { name: "608", floor: "6th" }, { name: "410A", floor: "4th" }, { name: "203", floor: "2nd" }, { name: "702", floor: "7th" }, { name: "008", floor: "0th" },
+  { name: "604", floor: "6th" }, { name: "405", floor: "4th" }, { name: "503", floor: "5th" }, { name: "603B", floor: "6th" }, { name: "411", floor: "4th" },
+  { name: "409", floor: "4th" }, { name: "605", floor: "6th" }, { name: "509", floor: "5th" }, { name: "online", floor: "online" }, { name: "506B", floor: "5th" },
+  { name: "702B", floor: "7th" }, { name: "603C", floor: "6th" }, { name: "603", floor: "6th" }, { name: "606", floor: "6th" }, { name: "603A", floor: "6th" },
+  { name: "702A", floor: "7th" }, { name: "609", floor: "6th" }, { name: "801", floor: "8th" }, { name: "607B", floor: "6th" }, { name: "703", floor: "7th" },
+  { name: "606-5", floor: "6th" }, { name: "606-4", floor: "6th" }, { name: "603-3", floor: "6th" }, { name: "603-2", floor: "6th" }, { name: "309", floor: "3rd" },
+  { name: "410C", floor: "4th" }, { name: "412", floor: "4th" },
 ];
 
 const daysOfWeek = [
@@ -38,8 +43,17 @@ function Room() {
   }, [day, startTime, endTime]); // Dependency array to re-fetch when these values change
 
   const checkIfOccupied = (room) => {
-    return occupiedRooms.includes(room);
+    return occupiedRooms.includes(room.name);
   };
+
+  // Separate rooms by floor
+  const floors = rooms.reduce((acc, room) => {
+    if (!acc[room.floor]) {
+      acc[room.floor] = [];
+    }
+    acc[room.floor].push(room);
+    return acc;
+  }, {});
 
   return (
     <div className="w-full h-full flex flex-col items-center justify-center">
@@ -76,21 +90,28 @@ function Room() {
             sx={{ padding: '10px' }}
           />
         </div>
-        <div className="grid grid-cols-4 gap-5">
-          {rooms.map((room) => (
-            <div
-              key={room}
-              className={`p-10 rounded shadow-md font-semibold ${
-                checkIfOccupied(room) ? "bg-red-500" : "bg-green-500"
-              }`}
-            >
-              Room {room}
+        {/* Render rooms by floor */}
+        {Object.entries(floors).map(([floor, roomsOnFloor]) => (
+          <div key={floor}>
+            <h1 className="text-xl font-bold mt-6 mb-2">{floor} floor</h1>
+            <div className="grid grid-cols-4 gap-5">
+              {roomsOnFloor.map((room) => (
+                <div
+                  key={room.name}
+                  className={`p-10 rounded shadow-md font-semibold ${
+                    checkIfOccupied(room) ? "bg-red-300" : "bg-green-400"
+                  }`}
+                >
+                  <h1 className="text-lg font-semibold mb-2">{room.name}</h1>
+                  <p className="text-sm text-gray-500">{room.floor} floor</p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
         <div className="flex flex-col items-center justify-center mt-10">
-        <h1 className="text-2xl font-bold mt-4">Percentage occupancy of rooms</h1>
-        <Occupancy occupiedRooms={occupiedRooms} totalRooms={rooms.length} />
+          <h1 className="text-2xl font-bold mt-4">Percentage occupancy of rooms</h1>
+          <Occupancy occupiedRooms={occupiedRooms} totalRooms={rooms.length} />
         </div>
       </div>
     </div>
