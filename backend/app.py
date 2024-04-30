@@ -7,6 +7,7 @@ from dash import dcc, html
 from dash.dependencies import Input, Output
 import numpy as np
 from flask_cors import CORS
+app = dash.Dash(__name__, external_stylesheets=['/assets/style.css'])
 
 app = Flask(__name__)
 CORS(app)
@@ -27,16 +28,28 @@ layout2 = go.Layout(title='Graph 2')
 
 # Define layout for the Dash app
 dash_app.layout = html.Div(children=[
-    html.H1(children='Hours Spent per Teacher'),
+    html.Nav(className='navbar', children=[
+        html.Div(className='navbar-header', children=[
+            html.Img(src='https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500', style={'height': '40px'}),
+            html.A("BAP-ISE", href="#", className="navbar-brand")
+        ]),
+        html.Ul([
+            html.Li(html.A('Home', href='http://localhost:5173/home')),
+            html.Li(html.A('Dashboard', href='http://localhost:5000/dashboard/')),
+            html.Li(html.A('Room', href='http://localhost:5173/room'))
+        ])
+    ]),
     
-    # Dropdowns for selecting filters
+    html.H1('Hours Spent per Teacher', style={'text-align': 'center', 'color': '#333'}),
+
     dcc.Dropdown(
         id='day-dropdown',
         options=[{'label': day, 'value': day} for day in df['day'].unique()]+[{'label':'include-all','value':'include-all'}],
         value=df['day'].unique()[0],
         multi=False,
         searchable=False,
-        placeholder='Select Day'
+        placeholder='Select Day',
+        style={'width': '50%', 'margin': 'auto'}
     ),
     dcc.Dropdown(
         id='department-dropdown',
@@ -44,7 +57,8 @@ dash_app.layout = html.Div(children=[
         value=df['department'].unique()[0],
         multi=False,
         searchable=False,
-        placeholder='Select Department'
+        placeholder='Select Department',
+        style={'width': '50%', 'margin': 'auto'}
     ),
     dcc.Dropdown(
         id='type-dropdown',
@@ -52,20 +66,23 @@ dash_app.layout = html.Div(children=[
         value=df['lab_or_lecture'].unique()[0],
         multi=False,
         searchable=False,
-        placeholder='Select Type'
+        placeholder='Select Type',
+        style={'width': '50%', 'margin': 'auto'}
     ),
-    dcc.Graph(id='hours-per-teacher'),
+    dcc.Graph(id='hours-per-teacher', style={'margin': '80px'}),
 
-    html.H1(children='Distribution of Teacher by subject, by department, by year, by lab/lecture'),
-    html.H2(children='select how to split disribution by:'),
+    html.H1('Distribution of Teacher by Subject, Department, Year, Lab/Lecture', style={'text-align': 'center', 'color': '#333'}),
+    html.H2('Select how to split distribution by:', style={'margin-top': '20px'}),
 
     dcc.Dropdown(
         id='dist_by-dropdown',
-        options=[{'label':'branch','value':'branch'},{'label':'year','value':'year'},{'label':'lab_or_lecture','value':'lab_or_lecture'},{'label':'subject','value':'subject'}],
+        options=[{'label': 'branch', 'value': 'branch'}, {'label': 'year', 'value': 'year'},
+                 {'label': 'lab_or_lecture', 'value': 'lab_or_lecture'}, {'label': 'subject', 'value': 'subject'}],
         value='subject',
         multi=False,
         searchable=False,
-        placeholder='Select Type'
+        placeholder='Select Type',
+        style={'width': '50%', 'margin': 'auto'}
     ),
     dcc.Dropdown(
         id='faculty-dropdown',
@@ -73,10 +90,10 @@ dash_app.layout = html.Div(children=[
         value=df['faculty_code'].unique()[0],
         multi=False,
         searchable=False,
-        placeholder='Select Type'
+        placeholder='Select Type',
+        style={'width': '50%', 'margin': 'auto'}
     ),
-
-    dcc.Graph(id='dist-by-teacher')
+    dcc.Graph(id='dist-by-teacher', style={'padding': '20px'})
 ])
 
 # Define callback to update the Plotly graph based on dropdown selections
